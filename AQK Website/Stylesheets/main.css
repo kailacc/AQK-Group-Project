@@ -1,4 +1,4 @@
-body {
+html,body {
   position: relative;
   padding: 0;
   margin: 0;
@@ -9,7 +9,7 @@ body {
 .mySlides {
   box-sizing: border-box;
   width: 100%;
-  padding: 0px 0px 100px 0px;
+  padding: 0px 0px 0px 0px;
   }
 
 .fade {
@@ -42,7 +42,7 @@ nav {
  right: 0;
  padding: 20px 60px;
  text-align: left;
- background-color: rgba(255,255,255,0.5);
+ background-color: rgba(0,0,0,0);
  overflow: hidden;
  font-size: 18px;
  letter-spacing: 1px;
@@ -51,37 +51,36 @@ nav {
 }
 
 a {
-  text-decoration: none;
   display: inline-block;
   text-align: center;
   text-transform: uppercase;
   color: #eee;
-  padding: 1px 0;
+  padding: 0px 0;
   margin: 0 10px;
   transition: all 0.15s ease-in-out;
 }
 
 .hover_europe:hover {
-  color: #5851DB;
+  color: #C5958B;
 }
 .hover_asia:hover {
-  color: #833AB4;
+  color: #C5958B;
 }
 
 .hover_africa:hover {
-   color: #C13584;
+   color: #C5958B;
 }
 .hover_america:hover {
-  color: #E1306C;
+  color: #C5958B;
 }
 .hover_oceania:hover {
-  color: #FD1D1D;
+  color: #C5958B;
 }
 .hover_aboutus:hover {
-   color: #F56040;
+   color: #C5958B;
 }
 .hover_contactus:hover {
-   color: #FCAF45;
+   color: #C5958B;
 }
 
 .wide {
@@ -91,8 +90,12 @@ a {
   min-height: 100vh;
 }
 
+#navigation a{
+  text-decoration: none;
+}
 a.hover_home {
   font-size: 22px;
+  color: white;
   font-weight: bold;
 }
 
@@ -109,19 +112,19 @@ a.hover_contactus {
   background-color: white;
 }
 #africa {
-  background-color: black;
+  background-color: grey;
 }
 #asia {
   background-color: white;
 }
 #america {
-  background-color: black;
+  background-color: grey;
 }
 #oceania {
   background-color: white;
 }
 #contactus {
-  background-color: black;
+  background-color: grey;
 }
 
 /* Footer */
