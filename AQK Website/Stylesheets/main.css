@@ -126,12 +126,16 @@ a.hover_contactus {
 
 /* Footer */
 
+#footer h2{
+  font-weight: bold;
+}
+
 .footertext {
   text-align: center;
 }
 
 #footer {
-  padding: 10px 0;
+  padding: 20px 0;
   background-color: #dedede;
 }
 
@@ -181,5 +185,9 @@ p.copyright {
   color: gray;
   line-height: 40px;
   font-size: 15px;
-  bottom: 0;
+}
+
+p{
+  margin-top: 0;
+  margin-bottom: 0rem;
 }
