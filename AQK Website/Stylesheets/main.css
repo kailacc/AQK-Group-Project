@@ -40,7 +40,7 @@ nav {
  top: 0;
  left: 0;
  right: 0;
- padding: 20px 60px;
+ padding: 20px 50px;
  text-align: left;
  background-color: rgba(0,0,0,0);
  overflow: hidden;
@@ -112,28 +112,32 @@ a.hover_contactus {
   background-color: white;
 }
 #africa {
-  background-color: grey;
+  background-color: #EAD2CD;
 }
 #asia {
   background-color: white;
 }
 #america {
-  background-color: grey;
+  background-color: #EAD2CD;
 }
 #oceania {
   background-color: white;
 }
 #contactus {
-  background-color: grey;
+  background-color: #EAD2CD;
 }
 
 /* Footer */
 
 #footer h2{
+  color: #C17B6D;
   font-weight: bold;
+  margin-bottom: 0rem;
+  line-height: 1;
 }
 
 .footertext {
+  color: #C17B6D;
   text-align: center;
 }
 
@@ -180,8 +184,51 @@ a.hover_contactus {
 .socialmedia_icons {
   text-align: center;
   margin: auto;
+  margin-top: 4px;
 }
 
+/* contact us section */
+.contact_us{
+    color: #fff;
+    background: cover;
+    min-height: 300px;
+    font-family: sans-serif;
+
+}
+.contact_us .content{
+    /* background-color: rgba(2,2,2,.9); */
+    background-image: url(../images/image1.jpg);
+    background-attachment: fixed;
+    padding: 30px;
+}
+.contact_us .content h4{
+    margin-bottom: 30px;
+}
+.contact_us .content .form-control {
+    background-color: rgba(82,78,78,.07);
+    color: #FFF;
+    border: none;
+}
+.contact_us .content .form-control.active{
+  -webkit-transform: scale(1.1, 1.1);
+  -moztransform: scale(1.1, 1.1);
+  -o-transform: scale(1.1, 1.1);
+  transform: scale(1.1, 1.1);
+}
+.contact_us .content textarea {
+    height: 108px;
+    width: 600px;
+    outline:none;
+}
+
+.contact_us .content .btn-danger {
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.contact_us .content .container .row {
+  text-align: center;
+}
 /* footer copyright */
 p.copyright {
   text-align: center;
