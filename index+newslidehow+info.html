@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <!-- stylesheets -->
+  <link rel="stylesheet" href="stylesheets/main.css">
+
+  <!-- Bootstrap link for social media icons -->
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- Icon library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <title>World Festivals</title>
+
+
+</head>
+<html>
+<head>
+    <!-- styles put here, but you can include a CSS file and reference it instead! -->
+    <style type="text/css">
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        #map {
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<div id="map"></div>
+<script type="text/javascript">
+    // Create a map variable
+    var map;
+    // Function to initialize the map within the map div
+    function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: 40.74135, lng: -73.99802},
+            zoom: 2
+        });
+        // Create an array of alphabetical characters used to label the markers.
+        var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        var locations = [
+            {title: 'Coachella',location: {lat: 33.678472, lng: -116.237195}},
+            {title: 'Lollapalooza', location: {lat: 41.241136, lng: -87.645246}},
+            {title: 'Magh Mela Festival India', location: {lat: 25.315400, lng: 87.635966}},
+            {title: 'Harbin International Ice and Snow Sculpture Festival', location: {lat: 45.750000, lng: 126.650000}},
+            {title: 'Pingxi Lantern Festival', location: {lat: 25.043076, lng: 121.448124}},
+            {title: 'Holi Festival', location: {lat: 27.952857, lng: 84.018869}},
+            {title: 'Songkran', location: {lat: 13.758923, lng: 100.497463}},
+            {title: 'Thingyan Festival', location: {lat: 21.124585, lng: 96.253678}},
+            {title: 'Naadam', location: {lat: 47.918801, lng: 106.917615}},
+            {title: 'Bali Kite Festival', location: {lat: -8.657946, lng: 115.265133}},
+            {title: 'Obon Festival', location: {lat: 26.334399, lng: 127.805514}},
+            {title: 'Esala Perahera', location: {lat: 7.290000, lng: 80.630000}},
+            {title: 'Thimphu Tsechu', location: {lat: 27.507587, lng: 89.633717}},
+            {title: 'Mevlana Whirling Dervishes', location: {lat: 37.871876, lng: 32.498967}},
+            {title: 'Glastonbury', location: {lat:51.159843, lng: -2.585621}},
+            {title: 'Oktoberfest', location: {lat:48.138261, lng: 11.584509}},
+
+        ];
+        var markers = locations.map(function (location, i) {
+            return new google.maps.Marker({
+                position: location.location,
+                label: labels[i % labels.len],
+                title: location.title
+            });
+        });
+        var infoWindow = new google.maps.InfoWindow();
+        markers.forEach(function (marker) {
+            marker.addListener('click', function () {
+                console.log(marker);
+                infoWindow.close();
+                infoWindow = new google.maps.InfoWindow({
+                    content: marker.title
+                });
+                infoWindow.open(map, marker);
+            })
+        });
+        var markerCluster = new MarkerClusterer(map, markers,
+            {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
+    }
+</script>
+
+
+<!-- inlude library of marker clusterer-->
+<script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+
+<!--Insert your API Key in the below call to load the API.-->
+<script async defer src="https://maps.googleapis.com/maps/api/
+js?key=AIzaSyDzj_Pz1eniB1T4_K4LuaDiM6pnKsCv-rw&callback=initMap"></script>
+</body>
+</html>
+
+
+<body>
+
+  <!-- Navigation -->
+  <nav id="navigation">
+    <a data-scroll class="hover_home" href="#home">World Festival</a>
+    <a data-scroll class="hover_europe" href="#europe">Europe</a>
+    <a data-scroll class="hover_africa" href="#africa">Africa</a>
+    <a data-scroll class="hover_asia" href="#asia">Asia</a>
+    <a data-scroll class="hover_america" href="#america">America</a>
+    <a data-scroll class="hover_oceania" href="#oceania">Oceania</a>
+    <a data-scroll class="hover_contactus" href="#contactus">Contact Us</a>
+    <a data-scroll class="hover_aboutus" href="#aboutus">About Us</a>
+  </nav>
+
+  <!-- Banner Slideshow -->
+  <section id="home" class="slidehowhome">
+    <div class="slideshow-container">
+
+      <div class="mySlides fade">
+        <img src="Images/image1.jpg" style="box-sizing: border-box; width: 100%; padding: 0px 0px 0px 0px; min-height: 100vh">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="Images/image4.jpg" style="box-sizing: border-box; width: 100%; padding: 0px 0px 0px 0px; min-height: 100vh">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="Images/coachella.jpg" style="box-sizing: border-box; width: 100%; padding: 0px 0px 0px 0px; min-height: 100vh">
+      </div>
+
+      <div class="mySlides fade">
+          <img src="Images/south-africa.jpg" style="box-sizing: border-box; width: 100%; padding: 0px 0px 0px 0px; min-height: 100vh">
+        </div>
+
+     <div class="mySlides fade">
+              <img src="Images/holi.jpg" style="box-sizing: border-box; width: 100%; padding: 0px 0px 0px 0px; min-height: 100vh">
+            </div>
+
+      <div class="mySlides fade">
+            <img src="Images/vanuatu.jpg" style="box-sizing: border-box; width: 100%; padding: 0px 0px 0px 0px; min-height: 100vh">
+          </div>
+
+    </div>
+  </section>
+
+  <!-- Europe section -->
+  <section id="europe" class="wide">
+    <h2 class="europe_title">Europe Festivals</h2>
+    <p class="europe_subtitle"><i> abcdefghijk ... </i></p>
+    <p class="europe_text">We have created a fictional website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <br>
+    <h3 class="europe_title">Glastonbury</h3>
+    <p class="europe_text">Glastonbury Festival (formally Glastonbury Festival of Contemporary Performing Arts) is a five-day festival of contemporary performing arts that takes place in Pilton, Somerset, England. In addition to contemporary music, the festival hosts dance, comedy, theatre, circus, cabaret, and other arts. Leading pop and rock artists have headlined, alongside thousands of others appearing on smaller stages and performance areas. Films and albums recorded at Glastonbury have been released, and the festival receives extensive television and newspaper coverage. Glastonbury is now attended by around 200,000 people.Regarded as a major event in British culture, the festival is inspired by the ethos of the hippie, counterculture, and free festival movements. It retains vestiges of these traditions, such as the Green Fields area, which includes sections known as the Green Futures and Healing Fields. After the 1970s, the festival took place almost every year and grew in size, with the number of attendees.</p>
+  </section>
+
+
+  <section id="europe" class="wide">
+      <h4 class="europe_title">Oktoberfest</h4>
+      <p class="europe_text">Oktoberfest is the world's largest Volksfest. Held annually in Munich, Bavaria, Germany, it is a 16- to 18-day folk festival running from mid or late September to the first Sunday in October, with more than six million people from around the world attending the event every year. Locally, it is often called the Wiesn, after the colloquial name for the fairgrounds, Theresa's meadows (Theresienwiese). The Oktoberfest is an important part of Bavarian culture, having been held since the year 1810. Other cities across the world also hold Oktoberfest celebrations that are modeled after the original Munich event.
+      During the event, large quantities of Oktoberfest Beer are consumed: during the 16-day festival in 2013, for example, 7.7 million litres (66,000 US bbl; 1,700,000 imp gal) were served.[1] Visitors also enjoy numerous attractions, such as amusement rides, sidestalls, and games. There is also a wide variety of traditional foods available.
+      The Munich Oktoberfest originally took place in the 16-day period leading up to the first Sunday in October. In 1994, this longstanding schedule was modified in response to German reunification. As such, if the first Sunday in October falls on the 1st or the 2nd, then the festival would run until 3 October (German Unity Day). Thus, the festival now runs for 17 days when the first Sunday is 2 October and 18 days when it is 1 October. In 2010, the festival lasted until the first Monday in October (4 October), to mark the event's bicentennial.</p>
+  </section>
+  <!--End of Europe Section-->
+
+
+
+  <!-- Africa section -->
+  <section id="africa" class="wide">
+    <h2 class="africa_title">Africa Festivals</h2>
+    <p class="africa_subtitle"><i> abcdefghijk ... </i></p>
+    <p class="africa_text">We have created a fictional website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  </section>
+
+  <!-- Asia section -->
+  <section id="asia" class="wide">
+    <h2 class="asia_title">Asia Festivals</h2>
+    <p class="asia_subtitle"><i> abcdefghijk ... </i></p>
+    <p class="asia_text">We have created a fictional website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <br>
+    <h3 class="asia_title">Magh Mela Festival India</h3>
+    <p class="asia_text">Magh mela, also spelled Magha mela, is an annual festival with fairs held in the month of Magha (January/February) near river banks and sacred tanks near Hindu temples.[1] About every twelve years, Magha melas coincide with what is believed by faithful as an astrologically auspicious position of Jupiter, sun and moon, and these are called the Kumbh Mela such as the one at Allahabad (officially, Prayagraj). In the south, a notable festival is at the Mahamaham tank in Kumbhakonam; in the east, at Sagar island of West Bengal and Konark, Puri.
+        The Magha festival, along with the bathing rituals as a form of penance, is also observed by the Hindu community in Bali, Indonesia.[4]
+        Certain dates such as the Amavasya and the Makar Sankranti are considered particularly sacred, attracting a larger gathering. The festival is marked by a ritual dip in the waters, but it is also a celebration of community commerce with fairs, education, religious discourses by saints, dāna and community meals for the monks and the poor, and entertainment spectacle.
+        The religious basis for the Magh Mela is the belief that pilgrimage is a means for prāyaścitta (atonement, penance) for past mistakes,[6] the effort cleanses them of sins and that bathing in holy rivers at these festivals has a salvific value, moksha – a means to liberation from the cycle of rebirths (samsara).[7][8] According to Diane Eck – professor of Comparative Religion and Indian Studies, these festivals are "great cultural fairs" which brings people together, tying them with a shared thread of religious devotion, with an attendant bustle of commerce, trade and secular entertainment.[9]
+  </section>
+
+  <section id= "asia"class="wide">
+      <h3 class="asia_title">Holi Festival</h3>
+      <p class="asia_text">Holi ( /ˈhoʊliː/); is a popular ancient Hindu festival, originating from the Indian subcontinent. It is celebrated predominantly in India and Nepal, but has also spread to other areas of Asia and parts of the Western world through the diaspora from the Indian subcontinent. Holi is popularly known as the Indian "festival of spring", the "festival of colours", or the "festival of love". The festival signifies the arrival of spring, the end of winter, the blossoming of love, and for many a festive day to meet others, play and laugh, forget and forgive, and repair broken relationships. The festival also celebrates the beginning of a good spring harvest season. It lasts for a night and a day, starting on the evening of the Purnima (Full Moon day) falling in the Vikram Samvat Calendar, in the Hindu calendar month of Phalguna, which falls around middle of March in the Gregorian calendar. The first evening is known as Holika Dahan (burning of demon holika) or Chhoti Holi and the following day as Holi, Rangwali Holi, Dhuleti, Dhulandi, or Phagwah.
+          Holi is an ancient Hindu religious festival which has become popular with non-Hindus as well in many parts of South Asia, as well as people of other communities outside Asia. In addition to India and Nepal, the festival is celebrated by Indian subcontinent diaspora in countries such as Jamaica, Suriname, Guyana, Trinidad and Tobago, South Africa, Malaysia, the United Kingdom, the United States, Canada, Mauritius, and Fiji. In recent years the festival has spread to parts of Europe and North America as a spring celebration of love, frolic, and colours.</p>
+</section>
+
+<section id="asia" class="wide">
+     <h4 class="asia_title">Thimphu Tshechu</h4>
+     <p class="asia_text">Thimphu Tshechu starts on the 10th day of the 8th lunar month. The three-day religious event plays an important role in the lives of Bhutanese people as it is an opportunity for the Buddhist followers to immerse and cleanse themselves of the bad Karma and to remind them of what to make of their lives.
+Staying true to the age-old tradition, locals dressed in their finest outfit and jewelries gather at the Thimphu Tashichoedzong. This spiritual social event brings people together unified by the common culture, tradition, and beliefs. The sacred mask dance (Chham) is believed to invoke deities blessing all who witness the Chham.
+A Tsechu is performed as a tribute to Guru Rimpoche, a great Buddhist master who brought Buddhism to Bhutan. Sources say Guru Rimpoche healed a king called Sindhu Raja by performing eight forms of dances representing eight manifestations of Padmasambhava in the Bumthang Valley to restore the health of the king. These became the Chham dances depicting the grandeur of Padmasambhava which are now performed by monks and laymen.
+The monks perform a series of meticulously choreographed religion inspired dances wearing grand silk robes and exquisitely crafted mask. It takes years learning and mastering the art of mask dance and months of meticulous practicing and rehearsing for the grand event.
+The three-day event presents a collection of age-old Chham which includes Dance of the Stag and the Hounds, Dance of the Lords of the cemetery and the theatrical presentation of the judgment day after a person dies which are quintessential Buddhist beliefs and the Dance of Eight Manifestations of Padmasambhava.</p>
+</section>
+
+
+  <!-- America section -->
+  <section id="america" class="wide">
+    <h2 class="america_title">America Festivals</h2>
+    <p class="america_subtitle"><i> abcdefghijk ... </i></p>
+    <p class="america_text">We have created a fictional website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  </section>
+
+  <!-- Oceania section -->
+  <section id="oceania" class="wide">
+
+  </section>
+
+  <!-- Contact Us information -->
+  <section id="contactus" class="wide">
+
+    <h1> CONTACT US </h1>
+    <p>Send us a message and we'll get back to you soon. </p>
+
+    <form>
+      <input name="name" type="text" class="feedback-input" placeholder="Name" />
+      <input name="email" type="text" class="feedback-input" placeholder="Email" />
+      <textarea name="text" class="feedback-input" placeholder="Comment"></textarea>
+      <input type="submit" value="SUBMIT"/>
+    </form>
+
+    <p>Whether you have a question, you want to give us feedback</p>
+    <p>or just want to say hello, we're happy to hear from you.</p>
+
+  </section>
+
+  <!-- Footer section -->
+  <section id="footer">
+
+    <div class="footertext">
+      <h2 class="footertitle">Follow us on Social Media</h2>
+      <p class="socialmediatext">Keep up to date with all the activities, news and events</p>
+    </div>
+
+    <div class="pagefooter">
+      <div class="socialmedia_icons">
+        <a href="https://www.facebook.com/bootsnipp"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
+    	  <a href="https://twitter.com/bootsnipp"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
+    	  <a href="https://instagram.com/bootsnipp"><i id="social-ig" class="fa fa-instagram fa-3x social"></i></a>
+      </div>
+    </div>
+
+    <div class="footercopyright">
+      <p class="copyright">© 2019 Amy Youpa, Quinilinn Yuson & Kaila Conley-Conversi, </p>
+    </div>
+
+  </section>
+
+  <!-- Scripts -->
+
+  <!-- fading slideshow JavaScript -->
+  <script src="scripts/slideshow.js"></script>
+
+  <!-- smooth scroll JavaScript -->
+  <script src="scripts/smoothscroll.js"></script>
+
+  <!-- Bootstrap scripts -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>
