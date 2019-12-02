@@ -43,8 +43,9 @@ nav {
  right: 0;
  padding: 20px 50px;
  text-align: left;
- background-color: rgb(255,187,153);
- opacity: 1;
+ /* background-color: rgb(255,187,153); */
+ background-color: transparent;
+ opacity: 10;
  overflow: hidden;
  font-size: 18px;
  letter-spacing: 1px;
@@ -56,9 +57,9 @@ a {
   display: inline-block;
   text-align: center;
   text-transform: uppercase;
-  color: #eee;
+  color: #000000;
   padding: 0px 0;
-  margin: 0 10px;
+  margin: 0 8px;
   transition: all 0.15s ease-in-out;
 }
 
@@ -88,7 +89,7 @@ a {
 .wide {
   box-sizing: border-box;
   width: 100%;
-  padding: 30px 60px 30px 60px;
+  padding: 80px 60px 60px 60px;
   min-height: 100vh;
 }
 
@@ -97,17 +98,20 @@ a {
 }
 a.hover_home {
   font-size: 22px;
-  color: #eee;
+  color: #757575;
   font-weight: bold;
 }
 
 a.hover_aboutus {
   float: right;
+  margin-top: 5px;
 }
 
 a.hover_contactus {
   float: right;
+  margin-top: 5px;
 }
+
 
 /* Sections */
 #europe {
@@ -293,5 +297,5 @@ h3 {
 
 h2 {
   color: rgb(255,187,153);
-  text-shadow: 2px 2px 2px #d1cac7;
+  /* text-shadow: 2px 2px 2px #d1cac7; */
 }
