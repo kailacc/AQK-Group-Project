@@ -2,7 +2,8 @@ html,body {
   position: relative;
   padding: 0;
   margin: 0;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Oswald', sans-serif;
+  color: #666666;
 }
 
 /* Slideshow CSS */
@@ -42,12 +43,13 @@ nav {
  right: 0;
  padding: 20px 50px;
  text-align: left;
- background-color: rgba(0,0,0,0);
+ background-color: rgb(255,187,153);
+ opacity: 1;
  overflow: hidden;
  font-size: 18px;
  letter-spacing: 1px;
  width: 100%;
- z-index: 10;
+ z-index: 99;
 }
 
 a {
@@ -86,7 +88,7 @@ a {
 .wide {
   box-sizing: border-box;
   width: 100%;
-  padding: 80px 60px 60px 60px;
+  padding: 30px 60px 30px 60px;
   min-height: 100vh;
 }
 
@@ -112,13 +114,13 @@ a.hover_contactus {
   background-color: white;
 }
 #africa {
-  background-color: #EAD2CD;
+  background-color: #ffe6cc;
 }
 #asia {
   background-color: white;
 }
 #america {
-  background-color: #EAD2CD;
+  background-color: #ffe6cc;
 }
 #oceania {
   background-color: white;
@@ -270,7 +272,24 @@ p.copyright {
   font-size: 15px;
 }
 
-p{
+p {
   margin-top: 0;
   margin-bottom: 0rem;
+}
+
+img {
+  float: left;
+  margin: 0px 30px 30px 0px;
+  border: 6px;
+  border-style: solid;
+  border-color: rgb(255,187,153);
+}
+
+h3 {
+  font-size: 1em;
+}
+
+h2 {
+  color: rgb(255,187,153);
+  text-shadow: 2px 2px 2px #d1cac7;
 }
