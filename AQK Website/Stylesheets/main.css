@@ -6,7 +6,7 @@ html,body {
 }
 
 /* Map CSS */
-#map {
+#photomap {
   background-image: url(../images/bannermap.png);
   background-repeat: no-repeat;
   background-position: center;
