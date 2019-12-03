@@ -13,7 +13,6 @@ html,body {
   background-attachment: fixed;
 }
 
-
 /* Navigation CSS*/
 nav {
  box-sizing: border-box;
@@ -64,16 +63,10 @@ a {
    color: #F3CD20;
 }
 
-.wide {
-  box-sizing: border-box;
-  width: 100%;
-  padding: 80px 60px 60px 60px;
-  min-height: 100vh;
-}
-
 #navigation a{
   text-decoration: none;
 }
+
 a.hover_home {
   font-size: 22px;
   color: #BD7B05;
@@ -92,6 +85,13 @@ a.hover_contactus {
 
 
 /* Sections CSS */
+.wide {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 80px 60px 60px 60px;
+  min-height: 100vh;
+}
+
 #oceania {
   background-color: #000000;
 }
@@ -112,9 +112,6 @@ a.hover_contactus {
 img {
   float: left;
   margin: 0px 30px 30px 0px;
-  /* border: 6px;
-  border-style: solid; */
-  /* border-color: rgb(255,187,153); */
 }
 
 h3 {
@@ -282,27 +279,4 @@ p.socialmediatext {
 p.footercopyright {
   margin-top: 0;
   margin-bottom: 0rem;
-}
-
-/* test */
-:root {
-  --gutter: 2rem;
-  --black: #000;
-  --white: #fff;
-}
-
-.hero__content {
-  position: relative;
-  min-height: 100vh;
-  justify-content: center;
-  align-items: center;
-}
-
-.hero__scroll {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  cursor: pointer;
-  margin-bottom: 0px;
 }
