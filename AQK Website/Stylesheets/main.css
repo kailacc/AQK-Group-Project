@@ -7,7 +7,7 @@ html,body {
 
 /* Map CSS */
 #map {
-  background-image: url(../images/map.png);
+  background-image: url(../images/bannermap.png);
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
@@ -137,7 +137,7 @@ p {
 form { max-width:50%; margin:50px auto; }
 
 #contactus {
-  background-image: url(../images/mapdark.png);
+  background-image: url(../images/darkmap.png);
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -282,4 +282,27 @@ p.socialmediatext {
 p.footercopyright {
   margin-top: 0;
   margin-bottom: 0rem;
+}
+
+/* test */
+:root {
+  --gutter: 2rem;
+  --black: #000;
+  --white: #fff;
+}
+
+.hero__content {
+  position: relative;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero__scroll {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 0px;
 }
