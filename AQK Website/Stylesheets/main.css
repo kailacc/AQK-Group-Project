@@ -5,6 +5,26 @@ html,body {
   font-family: 'Oswald', sans-serif;
 }
 
+h2 {
+  color: #ADADAD;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1em;
+  color: black;
+}
+
+h4 {
+  color: black;
+  font-size: 20px;
+}
+
+
+p {
+  color: #AEAEAE
+}
+
 /* Map CSS */
 #photomap {
   background-image: url(../images/bannermap.png);
@@ -92,40 +112,211 @@ a.hover_contactus {
   min-height: 100vh;
 }
 
+/* oceania section */
 #oceania {
   background-color: #000000;
 }
+
+.oceania-box {
+  background: #DADADA;
+  padding: 20px;
+  width: 100%;
+}
+
+.oceania-image img{
+  width: 100%;
+  height: 400px;
+  display: block;
+  vertical-align: bottom;
+  float: left;
+  object-fit: cover;
+  padding-bottom: 20px;
+}
+
+#oceania h2 {
+  color: #ADADAD;
+  text-align: center;
+}
+
+#oceania h3 {
+  font-size: 20px;
+  color: black;
+}
+
+#oceania h4 {
+  color: black;
+  font-size: 15px;
+}
+
+#oceania p {
+  color: black;
+  font-size: 12px;
+}
+
+/* Africa section */
 #africa {
   background-color: #DADADA;
 }
+
+.africa-box {
+  background: black;
+  padding: 20px;
+  width: 100%;
+}
+
+.africa-image img{
+  width: 100%;
+  height: 400px;
+  display: block;
+  vertical-align: bottom;
+  float: left;
+  object-fit: cover;
+  padding-bottom: 20px;
+}
+
+#africa h2 {
+  color: black;
+  text-align: center;
+}
+
+#africa h3 {
+  font-size: 15px;
+  color: #DADADA;
+}
+
+#africa h4 {
+  color: #DADADA;
+  font-size: 15px;
+}
+
+#africa p {
+  color: #DADADA;
+  font-size: 12px;
+}
+
+/* Asia section */
 #asia {
   background-color: #000000;
 }
+
+.asia-box {
+  background: #DADADA;
+  padding: 20px;
+  width: 100%;
+}
+
+.asia-image img{
+  width: 100%;
+  height: 400px;
+  display: block;
+  vertical-align: bottom;
+  float: left;
+  object-fit: cover;
+  padding-bottom: 20px;
+}
+
+#asia h2 {
+  color: #ADADAD;
+  text-align: center;
+}
+
+#asia h3 {
+  font-size: 20px;
+  color: black;
+}
+
+#asia h4 {
+  color: black;
+  font-size: 15px;
+}
+
+#asia p {
+  color: black;
+  font-size: 12px;
+}
+
+/* America section */
 #america {
   background-color: #DADADA;
 }
+
+.america-box {
+  background: black;
+  padding: 20px;
+  width: 100%;
+}
+
+.america-image img{
+  width: 100%;
+  height: 400px;
+  display: block;
+  vertical-align: bottom;
+  float: left;
+  object-fit: cover;
+  padding-bottom: 20px;
+}
+
+#america h2 {
+  color: black;
+  text-align: center;
+}
+
+#america h3 {
+  font-size: 15px;
+  color: #DADADA;
+}
+
+#america h4 {
+  color: #DADADA;
+  font-size: 15px;
+}
+
+#america p {
+  color: #DADADA;
+  font-size: 12px;
+}
+
+/* Europe section */
 #europe {
   background-color: #000000;
 }
 
-/* Section content format */
-img {
+.europe-box {
+  background: #DADADA;
+  padding: 20px;
+  width: 100%;
+}
+
+.europe-image img{
+  width: 100%;
+  height: 400px;
+  display: block;
+  vertical-align: bottom;
   float: left;
-  margin: 0px 30px 30px 0px;
+  object-fit: cover;
+  padding-bottom: 20px;
 }
 
-h3 {
-  font-size: 1em;
-  color: #808080;
-}
-
-h2 {
+#europe h2 {
   color: #ADADAD;
+  text-align: center;
 }
 
-p {
-  color: #AEAEAE
+#europe h3 {
+  font-size: 20px;
+  color: black;
 }
+
+#europe h4 {
+  color: black;
+  font-size: 15px;
+}
+
+#europe p {
+  color: black;
+  font-size: 12px;
+}
+
 
 /* contact us section */
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
