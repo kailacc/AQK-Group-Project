@@ -27,92 +27,6 @@
 
 </head>
 
-<html>
-<head>
-    <style type="text/css">
-        html, body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-        }
-        #map {
-            height: 100%;
-        }
-    </style>
-</head>
-
-
-<!-- MAP -->
-<body>
-<div id="map"></div>
-<script type="text/javascript">
-    // Create a map variable
-    var map;
-    // Function to initialize the map within the map div
-    function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-            center: {lat: 40.74135, lng: -73.99802},
-            zoom: 2
-        });
-        // Create an array of alphabetical characters used to label the markers.
-        var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-        var locations = [
-            {title: 'Naghol Land Diving Festival',location: {lat: -15.732000, lng: 168.196210}},
-            {title: 'New Orleans Mardi Gras',location: {lat: 30.984299, lng: -91.962334}},
-            {title: 'Boomtown Festival',location: {lat: 51.059772, lng: -1.310142}},
-            {title: 'Lantern Festival',location: {lat: 35.861660, lng: 104.195396}},
-            {title: 'Coachella',location: {lat: 33.678472, lng: -116.237195}},
-            {title: 'Lollapalooza', location: {lat: 41.241136, lng: -87.645246}},
-            {title: 'Magh Mela Festival India', location: {lat: 25.315400, lng: 87.635966}},
-            {title: 'Harbin International Ice and Snow Sculpture Festival', location: {lat: 45.750000, lng: 126.650000}},
-            {title: 'Pingxi Lantern Festival', location: {lat: 25.043076, lng: 121.448124}},
-            {title: 'Holi Festival', location: {lat: 27.952857, lng: 84.018869}},
-            {title: 'Songkran', location: {lat: 13.758923, lng: 100.497463}},
-            {title: 'Thingyan Festival', location: {lat: 21.124585, lng: 96.253678}},
-            {title: 'Naadam', location: {lat: 47.918801, lng: 106.917615}},
-            {title: 'Bali Kite Festival', location: {lat: -8.657946, lng: 115.265133}},
-            {title: 'Obon Festival', location: {lat: 26.334399, lng: 127.805514}},
-            {title: 'Esala Perahera', location: {lat: 7.290000, lng: 80.630000}},
-            {title: 'Thimphu Tsechu', location: {lat: 27.507587, lng: 89.633717}},
-            {title: 'Mevlana Whirling Dervishes', location: {lat: 37.871876, lng: 32.498967}},
-            {title: 'Glastonbury', location: {lat:51.159843, lng: -2.585621}},
-            {title: 'Oktoberfest', location: {lat:48.138261, lng: 11.584509}},
-
-        ];
-        var markers = locations.map(function (location, i) {
-            return new google.maps.Marker({
-                position: location.location,
-                label: labels[i % labels.len],
-                title: location.title
-            });
-        });
-        var infoWindow = new google.maps.InfoWindow();
-        markers.forEach(function (marker) {
-            marker.addListener('click', function () {
-                console.log(marker);
-                infoWindow.close();
-                infoWindow = new google.maps.InfoWindow({
-                    content: marker.title
-                });
-                infoWindow.open(map, marker);
-            })
-        });
-        var markerCluster = new MarkerClusterer(map, markers,
-            {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
-    }
-</script>
-
-
-<!-- marker clusterer-->
-<script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
-
-<!-- API Key.-->
-<script async defer src="https://maps.googleapis.com/maps/api/
-js?key=AIzaSyDzj_Pz1eniB1T4_K4LuaDiM6pnKsCv-rw&callback=initMap"></script>
-</body>
-</html>
-
-
 <body>
 
   <!-- Navigation -->
@@ -128,7 +42,7 @@ js?key=AIzaSyDzj_Pz1eniB1T4_K4LuaDiM6pnKsCv-rw&callback=initMap"></script>
   </nav>
 
   <!-- Top Photo Banner -->
-
+  <section id="photomap" class="wide"></section>
 
   <!-- Oceania section -->
   <section id="oceania" class="wide">
